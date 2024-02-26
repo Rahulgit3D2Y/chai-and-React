@@ -4,12 +4,12 @@ import "./App.css";
 function App() {
   let [counter, setcounter] = useState(0);
   const addvalue = () => {
-    setcounter(counter + 1);
+    if (counter < 30) setcounter(counter + 1);
     console.log("value added", counter);
   };
 
   const subvalue = () => {
-    setcounter(counter - 1);
+    if (counter > 0) setcounter(counter - 1);
   };
   return (
     <>
